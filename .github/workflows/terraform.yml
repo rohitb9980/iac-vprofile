@@ -19,7 +19,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   BUCKET_NAME: ${{ secrets.BUCKET_TF_STATE }}
   AWS_REGION: us-east-1
-  EKS_CLUSTER0: vprofile-eks
+  EKS_CLUSTER: vprofile-eks
 
 jobs:
   terraform:
