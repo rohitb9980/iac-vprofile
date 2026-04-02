@@ -38,8 +38,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: "Initialize Terraform"
-        id: init
-        # Use env.BUCKET_NAME (defined above) instead of env.BUCKET_TF_STATE
+        id: terraform_init
         run: terraform init -backend-config="bucket=${{ env.BUCKET_NAME }}"
         
       - name: "Terraform FORMAT check"
