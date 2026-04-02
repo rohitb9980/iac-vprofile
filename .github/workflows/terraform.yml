@@ -51,7 +51,7 @@ jobs:
         run: |
           terraform init \
             -backend-config="bucket=${{ env.BUCKET_NAME }}" \
-            -backend-config="region=${{ env.AWS_REGION }}"
+            -backend-config="region=${{ env.AWS_REGION }}" \
             -skip-backend-validation
 
       - name: "Terraform Format Check"
