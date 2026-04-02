@@ -27,13 +27,12 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "vprofileactions1155"
-    key    = "BUCKET_TF_STATE"
-    region = "us-east-1"
+    bucket         = "vprofileactions1155"
+    key            = "BUCKET_TF_STATE"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-state-lock"
   }
 
   required_version = "~> 1.6.3"
 }
-##
-##
-######
